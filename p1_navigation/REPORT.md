@@ -74,14 +74,15 @@ QNetwork(
 )
 ~~~
 
-**Hyper-parameters**<br/>
-
-- BUFFER_SIZE = int(1e5)    # replay buffer size
-- BATCH_SIZE = 64           # minibatch size
-- GAMMA = 0.99              # discount factor
-- TAU = 1e-3                # for soft update of target parameters
-- LR = 5e-4                 # learning rate 
-- UPDATE_EVERY = 4          # how often to update the network
+### Hyperparameters
+Parameters that showed the best results are:
+- `BUFFER_SIZE` = 1e6 (1 milion), recommended in the dqn paper
+- `BATCH_SIZE`  = 64 ,  minibatch size
+- `GAMMA`       = 0.99 , discount factor
+- `TAU`         = 1e-3 , parameter for soft update of target parameters
+- `LR`          = 5e-4 , learning rate
+- `UPDATE_EVERY`= 4, how often to update the network
+- `EPS_DECAY` = 0.995, how much to decay epsilon from 1.0 to 0.01, for epsilon-greedy action selection
 
 
 ### Plot of Rewards
