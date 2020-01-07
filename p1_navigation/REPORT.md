@@ -60,11 +60,11 @@ And the number of hidden layers and each size is configurable in this project.<b
 You can input the list of hidden layers as one of the input parameters when creating an agent.<br/>
 The hidden layers used in this project is [64,64] ie, 2 layers with 64, 64 neurons in each layer. <br/>
 
-Number of features
-* Input layers : 37
-* Hidden layer 1: 64
-* Hidden layer 2: 64
-* Output layer : 4
+Network dimensions:
+* Input layers  : 37
+* Hidden layer1 : 64
+* Hidden layer2 : 64
+* Output layer  : 4
 
 ~~~python
 QNetwork(
@@ -76,19 +76,19 @@ QNetwork(
 
 **Hyper-parameters**<br/>
 
-- BUFFER_SIZE = int(1e5)  # replay buffer size
-- BATCH_SIZE = 64         # minibatch size
-- GAMMA = 0.99            # discount factor
-- TAU = 1e-3              # for soft update of target parameters
-- LR = 5e-4               # learning rate 
-- UPDATE_EVERY = 4        # how often to update the network
+- BUFFER_SIZE = int(1e5)    # replay buffer size
+- BATCH_SIZE = 64           # minibatch size
+- GAMMA = 0.99              # discount factor
+- TAU = 1e-3                # for soft update of target parameters
+- LR = 5e-4                 # learning rate 
+- UPDATE_EVERY = 4          # how often to update the network
 
 
 ### Plot of Rewards
 
 A plot of rewards per episode
 - plot an average reward (over 100 episodes)
-- It shows this agent solve the environment in in 169 episodes!
+- It shows this agent solve the environment in in 404 episodes!
 ![image](https://github.com/mostafa-shaheen/Deep-RL-Nanodegree/blob/master/p1_navigation/average_scores.png "DQN")
 ![image](https://github.com/mostafa-shaheen/Deep-RL-Nanodegree/blob/master/p1_navigation/Score_per_episode_plot.png "DQN")
 
