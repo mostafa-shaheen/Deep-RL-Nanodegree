@@ -76,7 +76,7 @@ QNetwork(
 
 ### Hyperparameters
 Parameters that showed the best results are:
-- `BUFFER_SIZE` = 1e6 (1 milion), recommended in the dqn paper
+- `BUFFER_SIZE` = 1e6 , recommended in the dqn paper
 - `BATCH_SIZE`  = 64 ,  minibatch size
 - `GAMMA`       = 0.99 , discount factor
 - `TAU`         = 1e-3 , parameter for soft update of target parameters
