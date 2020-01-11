@@ -56,3 +56,12 @@ The target network weights are soft updated using the local network weights.
 ## Rewards plot
 A plot of the average rewards received is seen below:
 ![scores_plot](https://github.com/mostafa-shaheen/Deep-RL-Nanodegree/blob/master/p2_continuous-control/score_plot.png)
+the environment was solved in 76 episodes as the next 100 episode scores were averaged to +30.0.
+maybe it's more convincing to say that the environment was solved after the total 176 episodes because the agent actually was still learning during the last 100 episodes.
+
+## Future ideas for improving agents performance
+- Use a different Neural Network architecture for actor and critic.
+- Implement with other methods such as A3C, PPO, D4PG for faster and improved agent performance.
+- Implement using Hierarchical reinforcement learning.
+  - Move near the goal roughly.
+  - Reach goal fine.
