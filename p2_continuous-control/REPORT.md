@@ -2,9 +2,9 @@
 This file reports the method adopted to train an agent for solving the task of continuous control of a double jointed arm in a Unity environment.
 
 ## Inputs
-state space: 33 (Continuous).
-action space: 4 (Continuous).
-reward structure: +0.1 for reaching the goal position.
+- state space: 33 (Continuous).
+- action space: 4 (Continuous).
+- reward structure: +0.1 for reaching the goal position.
 
 
 ## Method
@@ -56,7 +56,7 @@ The target network weights are soft updated using the local network weights.
 ## Rewards plot
 A plot of the average rewards received is seen below:
 ![scores_plot](https://github.com/mostafa-shaheen/Deep-RL-Nanodegree/blob/master/p2_continuous-control/score_plot.png)
-the environment was solved in 76 episodes as the next 100 episode scores were averaged to +30.0.
+- the environment was solved in 76 episodes as the next 100 episode scores were averaged to +30.0.
 maybe it's more convincing to say that the environment was solved after the total 176 episodes because the agent actually was still learning during the last 100 episodes.
 
 ## Future ideas for improving agents performance
