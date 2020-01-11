@@ -55,4 +55,4 @@ The target network weights are soft updated using the local network weights.
 ```
 ## Rewards plot
 A plot of the average rewards received is seen below:
-https://github.com/mostafa-shaheen/Deep-RL-Nanodegree/blob/master/p2_continuous-control/score_plot.png
+![scores_plot](https://github.com/mostafa-shaheen/Deep-RL-Nanodegree/blob/master/p2_continuous-control/score_plot.png)
