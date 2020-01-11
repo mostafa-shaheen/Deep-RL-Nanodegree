@@ -48,10 +48,11 @@ The target network weights are soft updated using the local network weights.
 - TAU = 1e-3 # for soft update of target parameters.
 - LR_ACTOR = 1e-4 # Actor Learning Rate.
 - LR_CRITIC = 1e-3 # Critic Learning Rate.
-- maximum number of timesteps per episode =1000.
+- MAx_t =1000. #maximum number of timesteps per episode 
 - WEIGHT_DECAY = 0 # L2 weight decay.
 - UPDATE_EVERY = 20        # how often to update the network.
 - UPDATE_NETWORK = 10      # update network this many times.
 ```
 ## Rewards plot
 A plot of the average rewards received is seen below:
+https://github.com/mostafa-shaheen/Deep-RL-Nanodegree/blob/master/p2_continuous-control/score_plot.png
