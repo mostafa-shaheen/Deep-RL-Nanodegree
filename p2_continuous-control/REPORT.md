@@ -21,6 +21,14 @@ While the Critic evaluates the expected values from a state,action pair i.e. Q v
 - bn  = BatchNorm1d(Fc1)
 - Fc2 = ReLU (Fc1 x 300 neurons).
 - Fc3 = ReLU (Fc2 x output_state (actions = 4)).
+```python
+Actor(
+  (fc1): Linear(in_features=33, out_features=400, bias=True)
+  (bn): BatchNorm1d(400, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (fc2): Linear(in_features=400, out_features=300, bias=True)
+  (fc3): Linear(in_features=300, out_features=4, bias=True)
+)
+```
 ### The structure of the Critic is as follows:
 - Fc1 = ReLU (input_state (states = 33) x 400 neurons).
 - bn  = BatchNorm1d(Fc1)
