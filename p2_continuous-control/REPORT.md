@@ -16,14 +16,14 @@ Therefore, the Deep Deterministic Policy Gradient (DDPG) algorithm which is an A
 In this method the actor is the agent i.e. policy that takes the state and outputs actions.
 While the Critic evaluates the expected values from a state,action pair i.e. Q value estimator
 
-**The structure of the Actor is as follows:**
-F1 = ReLU (input_state (states = 33) x 128 neurons)
-F2 = ReLU (F1 x 128 neurons)
-F3 = ReLU (F2 x output_state (actions = 4))
-**The structure of the Critic is as follows:**
+###The structure of the Actor is as follows:
+- Fc1 = ReLU (input_state (states = 33) x 128 neurons).
+- Fc2 = ReLU (F1 x 128 neurons).
+- Fc3 = ReLU (F2 x output_state (actions = 4)).
+###The structure of the Critic is as follows:
 F1 = ReLU (input_state (states = 33) x 128 neurons)
 F2 = ReLU (F1+action_size (=4) x 128 neurons)
 F3 = ReLU (F2 x 1)
 Two NNs for actor and critic of same architecture are used: local network (θ_local) and target network (θ_target).
-The target network weights are soft updated using the local network weights
+The target network weights are soft updated using the local network weights.
                     **θ_target = τθ_local + (1 - τ)θ_target**
