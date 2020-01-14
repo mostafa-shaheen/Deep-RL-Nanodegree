@@ -75,7 +75,7 @@ The image below is a plot of score(maximum over both agents) per episode to illu
 ![image1](https://github.com/mostafa-shaheen/Deep-RL-Nanodegree/blob/master/p3_collaboration-competition/score_plot1.png).
 
 the required average score to pass(+0.5) was achieved between episodes 900 and 950.
-I decided to continue training the agents for another 1000 episodes to see if I can reach an average score of 1.5. 
+<br/>I decided to continue training the agents for another 1000 episodes to see if I can reach an average score of 1.5. 
 but the score didn't exceed 1.06. Also, as shown below. it started oscillating and the instability had shown up in training like what was mentioned in the project lesson.
 
 ![image2](https://github.com/mostafa-shaheen/Deep-RL-Nanodegree/blob/master/p3_collaboration-competition/score_plot2.png)
