@@ -61,5 +61,5 @@ Then extract the archive in the project folder.
 
 Place the file in the DRLND GitHub repository, in the p3_collaboration-competition/ folder, and unzip (or decompress) the file.
 
-### Instructions
-Follow the instructions in Continuous_Control.ipynb to get started with training your own agent!
+## Instructions
+Follow the instructions in Tennis.ipynb to get started with training your own agent!
