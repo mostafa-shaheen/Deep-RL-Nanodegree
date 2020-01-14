@@ -13,10 +13,7 @@ This repository is an implementation of DDPG agents for the collaboration and co
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
-- [Usage](#usage)
-- [Credits](#credits)
-- [License](#license)
-
+- [instructions](#instructions)
 
 
 ## Environment
