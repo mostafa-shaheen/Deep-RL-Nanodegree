@@ -62,51 +62,7 @@ Download the environment build corresponding to your OS
 Then extract the archive in the project folder.
 
 
+Place the file in the DRLND GitHub repository, in the p3_collaboration-competition/ folder, and unzip (or decompress) the file.
 
-If you wish to use the agent trained by repo owner, you can download the model parameters as follows:
-
-```shell
-wget https://github.com/frgfm/drlnd-p3-collaboration-competition/releases/download/v0.1.0/maddpg_actor.pt
-```
-
-
-
-## Usage
-
-### Training
-
-All training arguments can be found using the `--help` flag:
-
-```shell
-python train.py --help
-```
-
-Below you can find an example to train your agent:
-
-```shell
-python train.py --deterministic --no-graphics
-```
-
-### Evaluation
-
-You can use an existing model's checkpoint to evaluate your agent as follows:
-
-```shell
-python evaluate.py --checkpoint ./maddpg_actor.pt
-```
-
-
-
-## Credits
-
-This implementation is vastly based on the following papers:
-
-- [Asynchronous Actor Critic](https://arxiv.org/pdf/1602.01783.pdf)
-- [Proximal Policy Optimization](https://arxiv.org/pdf/1707.06347.pdf)
-- [DDPG](https://openreview.net/pdf?id=SyZipzbCb)
-
-
-
-## License
-
-Distributed under the MIT License. See `LICENSE` for more information.
+### Instructions
+Follow the instructions in Continuous_Control.ipynb to get started with training your own agent!
