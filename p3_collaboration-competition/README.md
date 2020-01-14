@@ -1,4 +1,4 @@
-# Tennis coach
+# Tennis player
 [![License](https://img.shields.io/badge/License-MIT-brightgreen.svg)](LICENSE) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/0689fca92f594fe88299d1e95d7e4c48)](https://www.codacy.com/manual/fg/drlnd-p3-collaboration-competition?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=frgfm/drlnd-p3-collaboration-competition&amp;utm_campaign=Badge_Grade) [![CircleCI](https://circleci.com/gh/frgfm/drlnd-p3-collaboration-competition.svg?style=shield)](https://circleci.com/gh/frgfm/drlnd-p3-collaboration-competition)
 
 This repository is an implementation of DDPG agents for the collaboration and competition project of Udacity Deep Reinforcement Learning nanodegree, in the tennis game provided by unity.
