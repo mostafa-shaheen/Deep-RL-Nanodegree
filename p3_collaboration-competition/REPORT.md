@@ -71,11 +71,11 @@ noise_ratio = 1/1000      # cancels noise after 1000 episodes
 
 ## Plot of Rewards
 The image below is a plot of score(maximum over both agents) per episode to illustrate that the agents got an average score of 1.0 over 100 consecutive episodes.
-[image1](https://github.com/mostafa-shaheen/Deep-RL-Nanodegree/blob/master/p3_collaboration-competition/score_plot1.png)
+![image1](https://github.com/mostafa-shaheen/Deep-RL-Nanodegree/blob/master/p3_collaboration-competition/score_plot1.png)
 the required average score to pass(+0.5) was achieved between episodes 900 and 950.
 I decided to continue training the agents for another 1000 episodes to see if I can reach an average score of 1.5. 
 but the score didn't exceed 1.06. Also, as shown below. it started oscillating and the instability had shown up in training like what was mentioned in the project lesson. 
-[image2](https://github.com/mostafa-shaheen/Deep-RL-Nanodegree/blob/master/p3_collaboration-competition/score_plot2.png)
-## Ideas for Future Work
+![image2](https://github.com/mostafa-shaheen/Deep-RL-Nanodegree/blob/master/p3_collaboration-competition/score_plot2.png)
 
+## Ideas for Future Work
 * Try solving the environment using the __Proximal Policy Optimization__ algorithm. A new family of policy gradient methods for reinforcement learning, which alternate between sampling data through interaction with the environment, and optimizing a "surrogate" objective function using stochastic gradient ascent. PPO outperforms other online policy gradient methods, and overall strikes a favorable balance between sample complexity, simplicity, and wall-time.
