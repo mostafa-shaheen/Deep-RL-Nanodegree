@@ -28,6 +28,25 @@ The original DDPG algorithm from which I extended to create the MADDPG version, 
 Actor-critic methods leverage the strengths of both policy-based and value-based methods.
 
 Using a policy-based approach, the agent (actor) learns how to act by directly estimating the optimal policy and maximizing reward through gradient ascent. Meanwhile, employing a value-based approach, the agent (critic) learns how to estimate the value (i.e., the future cumulative reward) of different state-action pairs. Actor-critic methods combine these two approaches in order to accelerate the learning process. Actor-critic agents are also more stable than value-based agents, while requiring fewer training samples than policy-based agents.
+### Networks architecture
+#### Actor
+~~~python
+Actor(
+  (fc1): Linear(in_features=24, out_features=256, bias=True)
+  (bn): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (fc2): Linear(in_features=256, out_features=128, bias=True)
+  (fc3): Linear(in_features=128, out_features=2, bias=True)
+)
+~~~
+#### Critic
+~~~python
+Critic(
+  (fcs1): Linear(in_features=24, out_features=256, bias=True)
+  (bn): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (fc2): Linear(in_features=258, out_features=128, bias=True)
+  (fc3): Linear(in_features=128, out_features=1, bias=True)
+)
+~~~
 
 ### Experience sharing
 I have chosen to implement two separate networks(local & target) for each agent. thus, I was reaching a point where one agent keeps beating the other which also leads to ending episodes quickly so even the better agent wasn't able to learn more. to overcome this issue I thought of a method that chooses the most winner agent over the last 100 episodes as the best agent and copies it's models weights to the other. it did well! and the two agents kept improving together and reached an average score of over +1.0 over 100 consecutive episodes. 
