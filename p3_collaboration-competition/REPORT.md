@@ -19,10 +19,6 @@ The environment is considered solved when the average (over 100 episodes) of tho
 ## Goal
 The goal of this project is to train two RL agents to play tennis. As in real tennis, the goal of each player is to keep the ball in play. And, when you have two equally matched opponents, you tend to see fairly long exchanges where the players hit the ball back and forth over the net.
 
-![Trained Agent][image1]
-
-##### &nbsp;
-
 ## Approach
 
 #### Multi-Agent Deep Deterministic Policy Gradient (MADDPG)
@@ -33,8 +29,8 @@ Actor-critic methods leverage the strengths of both policy-based and value-based
 
 Using a policy-based approach, the agent (actor) learns how to act by directly estimating the optimal policy and maximizing reward through gradient ascent. Meanwhile, employing a value-based approach, the agent (critic) learns how to estimate the value (i.e., the future cumulative reward) of different state-action pairs. Actor-critic methods combine these two approaches in order to accelerate the learning process. Actor-critic agents are also more stable than value-based agents, while requiring fewer training samples than policy-based agents.
 
-What makes this implementation unique is the **decentralized actor with centralized critic** approach from [the paper by Lowe and Wu](https://papers.nips.cc/paper/7217-multi-agent-actor-critic-for-mixed-cooperative-competitive-environments.pdf). Whereas traditional actor-critic methods have a separate critic for each agent, this approach utilizes a single critic that receives as input the actions and state observations from all agents. This extra information makes training easier and allows for centralized training with decentralized execution. Each agent still takes actions based on its own unique observations of the environment.
+### Experience sharing
+I have chosen to implement two separate networks(local & target) for each agent. thus, I was reaching a point where one agent keeps beating the other which also leads to ending episodes quickly so even the better agent wasn't able to learn more. to overcome this issue I thought of a method that chooses the most winner agent over the last 100 episodes as the best agent and copies it's models weights to the other. it did well! and the two agents kept improving together and reached an average score of over +1.0 over 100 consecutive episodes. 
 
-You can find the actor-critic logic implemented as part of the `Agent()` class [here](https://github.com/tommytracey/DeepRL-P3-Collaboration-Competition/blob/master/maddpg_agent.py#L110) in `maddpg_agent.py` of the source code. The actor-critic models can be found via their respective `Actor()` and `Critic()` classes [here](https://github.com/tommytracey/DeepRL-P3-Collaboration-Competition/blob/master/model.py#L12) in `models.py`.
-
-Note: As we did with Double Q-Learning in the last project, we're again leveraging local and target networks to improve stability. This is where one set of parameters `w` is used to select the best action, and another set of parameters `w'` is used to evaluate that action. In this project, local and target networks are implemented separately for both the actor and the critic.
+### prioritized experience replay
+Experience replay lets online reinforcement learning agents remember and reuse experiences from the past. In prior work, experience transitions were uniformly sampled from a replay memory. However, this approach simply replays transitions at the same frequency that they were originally experienced, regardless of their significance. prioritized experience replays important transitions more frequently, and therefore learns more efficiently. I used this [impelmentation](https://github.com/rlcode/per) that using a sum tree data structure which was recommended by project 2 reviewer.
