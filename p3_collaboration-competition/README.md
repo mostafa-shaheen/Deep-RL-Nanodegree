@@ -3,7 +3,7 @@
 
 This repository is an implementation of DDPG agents for the collaboration and competition project of Udacity Deep Reinforcement Learning nanodegree, in the tennis game provided by unity.
 
-![tennis](https://video.udacity-data.com/topher/2018/May/5af7955a_tennis/tennis.png)
+![tennis](https://github.com/mostafa-shaheen/Deep-RL-Nanodegree/blob/master/p3_collaboration-competition/Tennis_player.gif)
 
 
 
