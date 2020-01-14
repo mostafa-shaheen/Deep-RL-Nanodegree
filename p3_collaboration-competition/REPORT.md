@@ -52,3 +52,26 @@ I have chosen to implement two separate networks(local & target) for each agent.
 
 ## prioritized experience replay
 Experience replay lets online reinforcement learning agents remember and reuse experiences from the past. In prior work, experience transitions were uniformly sampled from a replay memory. However, this approach simply replays transitions at the same frequency that they were originally experienced, regardless of their significance. prioritized experience replays important transitions more frequently, and therefore learns more efficiently. I used this [impelmentation](https://github.com/rlcode/per) that using a sum tree data structure which was recommended by project 2 reviewer.
+
+## Hyperparameters
+
+~~~python
+BUFFER_SIZE = 2*int(1e5)  # replay buffer size
+BATCH_SIZE = 256          # minibatch size
+GAMMA = 0.96              # discount factor
+TAU   = 1e-3              # for soft update of target parameters
+LR_ACTOR  = 1e-4          # learning rate of the actor 
+LR_CRITIC = 1e-3          # learning rate of the critic
+WEIGHT_DECAY = 0          # L2 weight decay
+UPDATE_EVERY = 2          # how often to update the network
+UPDATE_NETWORK = 2        # how many times performing update
+SHARE_EVERY = 50          # how many episodes to share weights from the better agent 
+noise_ratio = 1/1000      # cancels noise after 1000 episodes
+~~~
+
+## Plot of Rewards
+
+
+## Ideas for Future Work
+
+* Try solving the environment using the __Proximal Policy Optimization__ algorithm. A new family of policy gradient methods for reinforcement learning, which alternate between sampling data through interaction with the environment, and optimizing a "surrogate" objective function using stochastic gradient ascent. PPO outperforms other online policy gradient methods, and overall strikes a favorable balance between sample complexity, simplicity, and wall-time.
